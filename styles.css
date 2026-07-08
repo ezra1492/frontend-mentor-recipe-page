@@ -15,8 +15,7 @@
 
 @font-face {
   font-family: "outfit";
-  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.woff2)
-    format("truetype"); /* By declaring the format the browser reads it and in case it isn't supported, the user won't spend data in assets the browser won't be able to use */
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.woff2) format("woff2"); /* By declaring the format the browser reads it and in case it isn't supported, the user won't spend data in assets the browser won't be able to use */
   font-weight: 100 900; /* covers all weights (100-900) to save loading time */
   font-style: normal;
   font-display: swap; /* Accessibility: shows fallback font while oufit loads */
@@ -24,7 +23,7 @@
 
 @font-face {
   font-family: "young-serif";
-  src: url(assets/fonts/young-serif/YoungSerif-Regular.woff2) format("truetype");
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.woff2) format("woff2");
   font-weight: 400; /* used for the recipe title */
   font-style: normal;
   font-display: swap;
@@ -40,7 +39,7 @@ DESIGN TOKEN VAULT ↓
 SPACING ↓
 --------- */
 
-  /* PRIMITIVE */
+  /* PRIMITIVE SPACING */
   --sp-1600: 8rem; /* 128px */
   --sp-600: 3rem; /* 48px */
   --sp-500: 2.5rem; /* 40px */
@@ -51,6 +50,16 @@ SPACING ↓
   --sp-200: 1rem; /* 16px */
   --sp-150: 0.75rem; /* 12px */
   --sp-100: 0.5rem; /* 8px */
+
+  /* PRIMITIVE COLOR */
+  --clr-stone-100: hsl(30, 54%, 90%); /* */
+  --clr-stone-150: hsl(30, 18%, 87%); /* */
+  --clr-stone-600: hsl(30, 10%, 34%); /* */
+  --clr-stone-900: hsl(24, 5%, 18%); /* */
+  --clr-rose-800: hsl(332, 51%, 32%); /* */
+  --clr-rose-50: hsl(330, 100%, 98%); /* */
+  --clr-brown-800: hsl(14, 45%, 36%); /* */
+  --clr-white: hsl(0, 0%, 100%); /* */
 
   /* SEMANTIC */
 
