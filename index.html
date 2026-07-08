@@ -26,9 +26,12 @@
     </style>
   </head>
   <body>
+    <!-- Main landmark: is the central topic of the HTML document -->
     <main>
+      <!-- Article: self-contained, independant and reusable element -->
       <article>
         <img src="" alt="" />
+        <!-- Header: introductory content -->
         <header>
           <h1>Simple Omelette Recipe</h1>
           <p>
@@ -38,10 +41,15 @@
           </p>
         </header>
 
+        <!-- Section: generic standalone section of a document, usually has a heading -->
         <section>
           <span>Preparation time</span>
+          <!-- Unordered list: by default rendered as a bulleted list -->
           <ul>
-            <li><time datetime="">Total: Approximately 10 minutes</time></li>
+            <li>
+              <!-- Time: represents a specific period of time, translate dates into machine-readeble format -->
+              <time datetime="">Total: Approximately 10 minutes</time>
+            </li>
             <li><time datetime=""></time>Preparation: 5 minutes</li>
             <li><time datetime=""></time>Cooking: 5 minutes</li>
           </ul>
@@ -66,6 +74,7 @@
 
         <section>
           <h2>Instructions</h2>
+          <!-- Ordered list: redered as a numbered list, using its attrribute type you can chose letters, Roman numerals o plain numbers (default) -->
           <ol>
             <li>
               <p>
@@ -117,25 +126,29 @@
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
+          <!-- Table: this element represents tabular-data using rows and columns -->
           <table>
+            <!-- Table body: encapsulates a series of rows (tr) -->
             <tbody>
               <tr>
+                <!-- Table header: head of a table group, calories, carbs, protein -->
                 <th>Calories</th>
-                <th>277kcal</th>
+                <!-- Table data: it contains the actual data -->
+                <td>277kcal</td>
               </tr>
               <tr>
                 <th>Carbs</th>
-                <th>0g</th>
+                <td>0g</td>
               </tr>
 
               <tr>
                 <th>Protein</th>
-                <th>20g</th>
+                <td>20g</td>
               </tr>
 
               <tr>
                 <th>Fat</th>
-                <th>22g</th>
+                <td>22g</td>
               </tr>
             </tbody>
           </table>
