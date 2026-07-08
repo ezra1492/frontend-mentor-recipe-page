@@ -29,12 +29,16 @@
     <!-- Main landmark: is the central topic of the HTML document -->
     <main>
       <!-- Article: self-contained, independant and reusable element -->
-      <article>
-        <img src="" alt="" />
+      <article class="recipe-card">
+        <img
+          class="recipe-card__img"
+          src="assets/images/image-omelette.jpeg"
+          alt=""
+        />
         <!-- Header: introductory content -->
         <header>
-          <h1>Simple Omelette Recipe</h1>
-          <p>
+          <h1 class="recipe-card__title">Simple Omelette Recipe</h1>
+          <p class="recipe-card__description">
             An easy and quick dish, perfect for any meal. This classic omelette
             combines beaten eggs cooked to perfection, optionally filled with
             your choice of cheese, vegetables, or meats.
@@ -42,27 +46,44 @@
         </header>
 
         <!-- Section: generic standalone section of a document, usually has a heading -->
-        <section>
-          <span>Preparation time</span>
+        <section class="recipe-card__preparation-stats">
+          <h3 class="recipe-card__preparation-time">Preparation time</h3>
           <!-- Unordered list: by default rendered as a bulleted list -->
           <ul>
             <li>
               <!-- Time: represents a specific period of time, translate dates into machine-readeble format -->
-              <time datetime="">Total: Approximately 10 minutes</time>
+              <time datetime="PT10M"
+                ><span class="recipe-card__time-head">Total:</span>
+                Approximately 10 minutes</time
+              >
             </li>
-            <li><time datetime=""></time>Preparation: 5 minutes</li>
-            <li><time datetime=""></time>Cooking: 5 minutes</li>
+            <li>
+              <time datetime="PT5M"
+                ><span class="recipe-card__time-head">Preparation:</span> 5
+                minutes</time
+              >
+            </li>
+            <li>
+              <time datetime="PT5M"
+                ><span class="recipe-card__time-head">Cooking:</span> 5
+                minutes</time
+              >
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2>Ingredients</h2>
-          <ul>
-            <li><p>2-3 large eggs</p></li>
-            <li><p>Salt, to taste</p></li>
-            <li><p>Pepper, to taste</p></li>
-            <li><p>1 tablespoon of butter or oil</p></li>
-            <li>
+          <h2 class="recipe-card__subtitle">Ingredients</h2>
+          <ul class="recipe-card__ingredient-list">
+            <li class="recipe-card__ingredient-item"><p>2-3 large eggs</p></li>
+            <li class="recipe-card__ingredient-item"><p>Salt, to taste</p></li>
+            <li class="recipe-card__ingredient-item">
+              <p>Pepper, to taste</p>
+            </li>
+            <li class="recipe-card__ingredient-item">
+              <p>1 tablespoon of butter or oil</p>
+            </li>
+            <li class="recipe-card__ingredient-item">
               <p>
                 Optional fillings: cheese, diced vegetables, cooked meats, herbs
               </p>
@@ -73,46 +94,59 @@
         <hr />
 
         <section>
-          <h2>Instructions</h2>
+          <h2 class="recipe-card__subtitle">Instructions</h2>
           <!-- Ordered list: redered as a numbered list, using its attrribute type you can chose letters, Roman numerals o plain numbers (default) -->
-          <ol>
+          <ol class="recipe-card__instruction-list">
             <li>
               <p>
-                Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
-                pepper until they are well mixed. You can add a tablespoon of
-                water or milk for a fluffier texture.
+                <span class="recipe-card__instruction-step"
+                  >Beat the eggs:</span
+                >
+                In a bowl, beat the eggs with a pinch of salt and pepper until
+                they are well mixed. You can add a tablespoon of water or milk
+                for a fluffier texture.
               </p>
             </li>
             <li>
               <p>
-                Heat the pan: Place a non-stick frying pan over medium heat and
-                add butter or oil.
+                <span class="recipe-card__instruction-step">Heat the pan:</span>
+                Place a non-stick frying pan over medium heat and add butter or
+                oil.
               </p>
             </li>
             <li>
               <p>
-                Cook the omelette: Once the butter is melted and bubbling, pour
-                in the eggs. Tilt the pan to ensure the eggs evenly coat the
-                surface.
+                <span class="recipe-card__instruction-step"
+                  >Cook the omelette:</span
+                >
+                Once the butter is melted and bubbling, pour in the eggs. Tilt
+                the pan to ensure the eggs evenly coat the surface.
               </p>
             </li>
             <li>
               <p>
-                Add fillings (optional): When the eggs begin to set at the edges
-                but are still slightly runny in the middle, sprinkle your chosen
-                fillings over one half of the omelette.
+                <span class="recipe-card__instruction-step"
+                  >Add fillings (optional):</span
+                >
+                When the eggs begin to set at the edges but are still slightly
+                runny in the middle, sprinkle your chosen fillings over one half
+                of the omelette.
               </p>
             </li>
             <li>
               <p>
-                Fold and serve: As the omelette continues to cook, carefully
-                lift one edge and fold it over the fillings. Let it cook for
-                another minute, then slide it onto a plate.
+                <span class="recipe-card__instruction-step"
+                  >Fold and serve:</span
+                >
+                As the omelette continues to cook, carefully lift one edge and
+                fold it over the fillings. Let it cook for another minute, then
+                slide it onto a plate.
               </p>
             </li>
             <li>
               <p>
-                Enjoy: Serve hot, with additional salt and pepper if needed.
+                <span class="recipe-card__instruction-step">Enjoy:</span> Serve
+                hot, with additional salt and pepper if needed.
               </p>
             </li>
           </ol>
@@ -121,19 +155,19 @@
         <hr />
 
         <section>
-          <h2>Nutrition</h2>
+          <h2 class="recipe-card__subtitle">Nutrition</h2>
           <p>
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
           <!-- Table: this element represents tabular-data using rows and columns -->
-          <table>
+          <table class="recipe-card__table">
             <!-- Table body: encapsulates a series of rows (tr) -->
             <tbody>
               <tr>
-                <!-- Table header: head of a table group, calories, carbs, protein -->
+                <!-- Table header: head of a table group, representing calories, carbs, protein -->
                 <th>Calories</th>
-                <!-- Table data: it contains the actual data -->
+                <!-- Table data: it contains the actual data, like 277kcal, 0g, 20g -->
                 <td>277kcal</td>
               </tr>
               <tr>
