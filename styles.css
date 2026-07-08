@@ -9,19 +9,79 @@
   padding: 0;
 }
 
-/* ===
- FONTS
-====== */
+/* ===== 
+ FONTS ↓
+======== */
 
-.young-serif {
-  font-family: "Young Serif", serif;
-  font-weight: 400;
+@font-face {
+  font-family: "outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.woff2)
+    format("truetype"); /* By declaring the format the browser reads it and in case it isn't supported, the user won't spend data in assets the browser won't be able to use */
+  font-weight: 100 900; /* covers all weights (100-900) to save loading time */
   font-style: normal;
+  font-display: swap; /* Accessibility: shows fallback font while oufit loads */
 }
 
-.outfit {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+@font-face {
+  font-family: "young-serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.woff2) format("truetype");
+  font-weight: 400; /* used for the recipe title */
   font-style: normal;
+  font-display: swap;
 }
+
+/* Entiendo que es recomendable transformar las fuentes de ttf a woff2 para hacerlas más ligeras y que carguen más rápido */
+
+/* =================
+DESIGN TOKEN VAULT ↓
+==================== */
+:root {
+  /* ------
+SPACING ↓
+--------- */
+
+  /* PRIMITIVE */
+  --sp-1600: 8rem; /* 128px */
+  --sp-600: 3rem; /* 48px */
+  --sp-500: 2.5rem; /* 40px */
+  --sp-400: 2rem; /* 32px */
+  --sp-350: 1.75rem; /* 28px */
+  --sp-300: 1.5rem; /* 24px */
+  --sp-250: 1.25rem; /* 20px */
+  --sp-200: 1rem; /* 16px */
+  --sp-150: 0.75rem; /* 12px */
+  --sp-100: 0.5rem; /* 8px */
+
+  /* SEMANTIC */
+
+  /* FONT SIZE */
+  --fs-body: ;
+  --fs-title: ;
+
+  /* */
+
+  /* */
+
+  /* */
+
+  /* */
+
+  /* ------
+SPACING ↑
+--------- */
+
+  /* --------- 
+ TYPOGRAFY ↓
+------------ */
+
+  /* FONT FAMILY */
+  /* FONT WEIGHT */
+
+  /* --------- 
+ TYPOGRAFY ↑
+------------ */
+}
+
+/* =================
+DESIGN TOKEN VAULT ↑
+==================== */
