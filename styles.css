@@ -69,6 +69,8 @@ DESIGN TOKEN VAULT ↓
 
   --pd-recipe-card: var(--sp-500);
 
+  --mrg-title: var(--sp-500) 0 var(--sp-300);
+
   --br-big: var(--sp-300);
   --br-small: var(--sp-150);
 
@@ -123,6 +125,10 @@ DESIGN TOKEN VAULT ↓
   --fw-prep-time: 600;
   --fw-bold: 700;
 
+  /* LINE HEIGHT */
+  --lh-100: 1; /* title, subtitle, prep-time, ol lists */
+  --lh-150: 1.5; /* paragraphs, ul lists and table data */
+
   /* --------
   TYPOGRAPHY ↑
   ------------ */
@@ -163,6 +169,16 @@ body {
   display: block;
   width: 100%;
   border-radius: var(--br-small);
+}
+
+.recipe-card__title {
+  display: block;
+  margin: var(--mrg-title);
+  font-family: var(--ff-titles);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-paragraph);
+  line-height: var(--lh-100);
+  color: var(--clr-title);
 }
 
 /* =================
