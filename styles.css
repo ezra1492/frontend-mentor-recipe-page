@@ -154,8 +154,15 @@ body {
 
 .recipe-card {
   padding: var(--pd-recipe-card);
+  width: var(--wd-recipe-card);
   border-radius: var(--br-big);
   background-color: var(--clr-card);
+}
+
+.recipe-card__img {
+  display: block;
+  width: 100%;
+  border-radius: var(--br-small);
 }
 
 /* =================
