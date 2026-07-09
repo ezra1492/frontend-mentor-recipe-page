@@ -71,6 +71,10 @@ DESIGN TOKEN VAULT ↓
   /* PADDING */
   --pd-recipe-card: var(--sp-500);
   --pd-prep-time: var(--sp-300);
+  --pd-ul: var(--sp-300);
+
+  /* TEXT INDENT */
+  --ti-prep-time: var(--sp-150);
 
   /* MARGIN */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
@@ -223,10 +227,19 @@ body {
   font-size: var(--fs-paragraph);
   font-weight: var(--fw-paragraph);
   line-height: var(--lh-150);
+  text-indent: var(--ti-prep-time);
+}
+
+.recipe-card__preparation-stats ul {
+  padding-left: var(--pd-ul);
 }
 
 .recipe-card__preparation-stats li {
   margin-bottom: var(--mrg-prep-time-list);
+}
+
+.recipe-card__preparation-stats li::marker {
+  color: var(--clr-prep-time-title);
 }
 
 .recipe-card__time-head {
