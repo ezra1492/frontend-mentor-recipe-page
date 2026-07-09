@@ -36,10 +36,10 @@ DESIGN TOKEN VAULT ↓
 ==================== */
 :root {
   /* ------
-SPACING ↓
---------- */
+  SPACING ↓
+  --------- */
 
-  /* PRIMITIVE SPACING */
+  /* PRIMITIVE SPACING (The what, raw units) */
   --sp-1600: 8rem; /* 128px */
   --sp-600: 3rem; /* 48px */
   --sp-500: 2.5rem; /* 40px */
@@ -51,45 +51,80 @@ SPACING ↓
   --sp-150: 0.75rem; /* 12px */
   --sp-100: 0.5rem; /* 8px */
 
-  /* PRIMITIVE COLOR */
-  --clr-stone-100: hsl(30, 54%, 90%); /* */
-  --clr-stone-150: hsl(30, 18%, 87%); /* */
-  --clr-stone-600: hsl(30, 10%, 34%); /* */
-  --clr-stone-900: hsl(24, 5%, 18%); /* */
-  --clr-rose-800: hsl(332, 51%, 32%); /* */
-  --clr-rose-50: hsl(330, 100%, 98%); /* */
-  --clr-brown-800: hsl(14, 45%, 36%); /* */
-  --clr-white: hsl(0, 0%, 100%); /* */
+  /* VIEWPORT BOUNDARIES */
+  --sp-wd-min: 23.4375rem; /* 375px Mobile, min-width */
+  --sp-wd-max: 46rem; /* 736px Dessktop, max-width */
 
-  /* SEMANTIC */
+  /* SEMANTIC SPACING (the why, the purpose) */
 
-  /* FONT SIZE */
-  --fs-body: ;
-  --fs-title: ;
+  --wd-recipe-card: clamp(var(--sp-wd-min), 90vw, var(--sp-wd-max));
 
-  /* */
-
-  /* */
-
-  /* */
-
-  /* */
+  --fs-title: var(--sp-500); /* 40px */
+  --fs-subtitle: var(--sp-350); /* 28px */
+  --fs-prep-time: var(--sp-250); /* 20px */
+  --fs-paragraph: var(--sp-200); /* 16px */
 
   /* ------
-SPACING ↑
---------- */
+  SPACING ↑
+  --------- */
 
-  /* --------- 
- TYPOGRAFY ↓
------------- */
+  /* ----
+  COLOR ↓
+  ------- */
+
+  /* PRIMITIVE COLOR */
+  --clr-stone-100: hsl(30, 54%, 90%); /* body background */
+  --clr-white: hsl(0, 0%, 100%); /* card background */
+  --clr-rose-50: hsl(330, 100%, 98%); /* prep-time background */
+  --clr-stone-900: hsl(24, 5%, 18%); /* titile */
+  --clr-stone-600: hsl(
+    30,
+    10%,
+    34%
+  ); /* paragraph + its bulleted points + table data */
+  --clr-stone-150: hsl(30, 18%, 87%); /* */
+  --clr-rose-800: hsl(
+    332,
+    51%,
+    32%
+  ); /* prep-time title + its bulleted points */
+  --clr-brown-800: hsl(14, 45%, 36%); /* */
+
+  /* SEMANTIC COLOR */
+  --clr-title: var(--clr-stone-900);
+  --clr-subtitle: var(--clr-brown-800);
+  --clr-prep-time: var(--clr-rose-800);
+  --clr-paragraph: var(--clr-stone-600);
+
+  /* ----
+  COLOR ↑
+  ------- */
+
+  /* --------
+  TYPOGRAPHY ↓
+  ------------ */
 
   /* FONT FAMILY */
-  /* FONT WEIGHT */
+  --ff-titles: "young-serif", serif;
+  --ff-paragraphs: "outfit", sans-serif;
 
-  /* --------- 
- TYPOGRAFY ↑
------------- */
+  /* FONT WEIGHT */
+  --fw-paragraph: 400;
+  --fw-prep-time: 600;
+  --fw-bold: 700;
+
+  /* --------
+  TYPOGRAPHY ↑
+  ------------ */
 }
+
+/* */
+
+/* */
+
+/* */
+
+/* */
 
 /* =================
 DESIGN TOKEN VAULT ↑
