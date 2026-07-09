@@ -61,18 +61,24 @@ DESIGN TOKEN VAULT ↓
   /* SEMANTIC SPACING (the why, the purpose) */
   --wd-recipe-card: clamp(var(--sp-wd-min), 90vw, var(--sp-wd-max));
 
+  /* FONT SIZE */
   --fs-title: var(--sp-500); /* 40px */
   --fs-subtitle: var(--sp-350); /* 28px */
   --fs-prep-time: var(--sp-250); /* 20px */
   --fs-paragraph: var(--sp-200); /* 16px */
-  --fs-footer: var(--sp);
+  --fs-footer: var(--sp-footer); /* 11px */
 
+  /* PADDING */
   --pd-recipe-card: var(--sp-500);
   --pd-prep-time: var(--sp-300);
 
+  /* MARGIN */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
   --mrg-description: var(--sp-400);
+  --mrg-prep-time: var(--sp-200);
+  --mrg-prep-time-list: var(--sp-100);
 
+  /* BORDER RADIUS */
   --br-big: var(--sp-300);
   --br-small: var(--sp-150);
 
@@ -198,8 +204,33 @@ body {
   display: block; /* <Section> is also a block-level element */
   padding: var(--pd-prep-time);
   margin-bottom: var(--mrg-description);
+  font-family: var(--ff-paragraphs);
   border-radius: var(--br-small);
+  color: var(--clr-paragraph);
   background-color: var(--clr-prep-time-background);
+}
+
+.recipe-card__preparation-time {
+  margin-bottom: var(--mrg-prep-time);
+  font-size: var(--fs-prep-time);
+  font-weight: var(--fw-prep-time);
+  line-height: var(--lh-100);
+  color: var(--clr-prep-time-title);
+}
+
+.recipe-card__preparation-stats time {
+  display: block;
+  font-size: var(--fs-paragraph);
+  font-weight: var(--fw-paragraph);
+  line-height: var(--lh-150);
+}
+
+.recipe-card__preparation-stats li {
+  margin-bottom: var(--mrg-prep-time-list);
+}
+
+.recipe-card__time-head {
+  font-weight: var(--fw-bold);
 }
 
 /* =================
