@@ -68,20 +68,21 @@ DESIGN TOKEN VAULT ↓
   --fs-paragraph: var(--sp-200); /* 16px */
   --fs-footer: var(--sp-footer); /* 11px */
 
-  /* PADDING */
+  /* PADDING: Internal 'bubble wrap' for our boxes*/
   --pd-recipe-card: var(--sp-500);
   --pd-prep-time: var(--sp-300);
-  --pd-ul: var(--sp-300);
+  --pd-ul: var(--sp-300); /* Moves the entire list container */
+  --pd-list: var(--sp-200); /* Internal space for every line in the item */
 
-  /* TEXT INDENT */
-  --ti-prep-time: var(--sp-150);
-
-  /* MARGIN */
+  /* MARGIN: Empty space between separate boxes */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
   --mrg-subtitle: var(--sp-300);
   --mrg-description: var(--sp-400);
   --mrg-prep-time: var(--sp-200);
-  --mrg-prep-time-list: var(--sp-100);
+  --mrg-list-bottom: var(--sp-100);
+
+  /* TEXT INDENT: Only moves the very first line of text */
+  --ti-list: var(--sp-150); /* empuja solo la primera línea */
 
   /* BORDER RADIUS */
   --br-big: var(--sp-300);
@@ -100,19 +101,11 @@ DESIGN TOKEN VAULT ↓
   --clr-white: rgba(255, 255, 255, 70%); /* card background */
   --clr-rose-50: hsl(330, 100%, 98%); /* prep-time background */
   --clr-stone-900: hsl(24, 5%, 18%); /* titile */
-  --clr-stone-600: hsl(
-    30,
-    10%,
-    34%
-  ); /* paragraph + its bulleted points + table data */
-  --clr-rose-800: hsl(
-    332,
-    51%,
-    32%
-  ); /* prep-time title + its bulleted points */
-  --clr-brown-800: hsl(14, 45%, 36%); /* */
+  --clr-stone-600: hsl(30, 10%, 34%); /* paragraph + bulleted points + th */
+  --clr-rose-800: hsl(332, 51%, 32%); /* prep-time title + bulleted points */
+  --clr-brown-800: hsl(14, 45%, 36%); /* subtitle + ol + td */
   --clr-anchor: hsl(228, 45%, 44%);
-  --clr-stone-150: hsl(30, 18%, 87%); /* */
+  --clr-stone-150: hsl(30, 18%, 87%); /* hr */
 
   /* SEMANTIC COLOR */
   --clr-card: var(--clr-white);
@@ -121,6 +114,7 @@ DESIGN TOKEN VAULT ↓
   --clr-prep-time-title: var(--clr-rose-800);
   --clr-prep-time-background: var(--clr-rose-50);
   --clr-paragraph: var(--clr-stone-600);
+  --clr-hr: var(--clr-stone-150);
 
   /* ----
   COLOR ↑
@@ -191,6 +185,10 @@ body {
   border-radius: var(--br-small);
 }
 
+/* ----------------
+   HEADER SECTION ↓
+   ---------------- */
+
 .recipe-card__title {
   display: block;
   margin: var(--mrg-title);
@@ -206,6 +204,14 @@ body {
   margin-bottom: var(--mrg-description);
   line-height: var(--lh-150);
 }
+
+/* ----------------
+   HEADER SECTION ↑
+   ---------------- */
+
+/* ---------------------
+   PREPARATION SECTION ↓
+   --------------------- */
 
 .recipe-card__preparation-stats {
   display: block; /* <Section> is also a block-level element */
@@ -226,24 +232,28 @@ body {
 .recipe-card__preparation-stats time {
   display: block;
   line-height: var(--lh-150);
-  text-indent: var(--ti-prep-time);
+  text-indent: var(--ti-list); /* Moves only the start of the time text */
 }
 
 .recipe-card__preparation-stats ul {
-  padding-left: var(--pd-ul);
+  padding-left: var(--pd-ul); /* Aligns the bullets under the title */
 }
 
 .recipe-card__preparation-stats li {
-  margin-bottom: var(--mrg-prep-time-list);
+  margin-bottom: var(--mrg-list-bottom);
 }
 
 .recipe-card__preparation-stats li::marker {
-  color: var(--clr-prep-time-title);
+  color: var(--clr-prep-time-title); /* Makes bullets match the section color */
 }
 
 .recipe-card__time-head {
   font-weight: var(--fw-bold);
 }
+
+/* ---------------------
+   PREPARATION SECTION ↑
+   --------------------- */
 
 .recipe-card__subtitle {
   margin-bottom: var(--mrg-subtitle);
@@ -253,6 +263,28 @@ body {
   font-weight: var(--fw-paragraph);
   color: var(--clr-subtitle);
 }
+
+/* ---------------------
+   INGREDIENTS SECTION ↓
+   --------------------- */
+
+.recipe-card__ingredient-list {
+  padding-left: var(--pd-ul); /* Aligns the bullets under the title */
+  line-height: var(--lh-150);
+}
+
+.recipe-card__ingredient-list li {
+  padding-left: var(--pd-list); /* Adds space for all lines of the ingredient */
+  margin-bottom: var(--mrg-list-bottom);
+}
+
+.recipe-card__ingredient-list li::marker {
+  color: var(--clr-subtitle); /* Makes bullets match the section color */
+}
+
+/* ---------------------
+   INGREDIENTS SECTION ↑
+   --------------------- */
 
 /* =================
 RECIPE CARD DESIGN ↑
