@@ -186,7 +186,7 @@ body {
   display: block;
   margin-bottom: var(--mrg-description);
   font-family: var(--ff-paragraphs);
-  font-size: var(--fw-paragraph);
+  font-size: var(--fs-paragraph);
   font-weight: var(--fw-paragraph);
   line-height: var(--lh-150);
   color: var(--clr-paragraph);
