@@ -51,18 +51,21 @@ DESIGN TOKEN VAULT ↓
   --sp-150: 0.75rem; /* 12px */
   --sp-100: 0.5rem; /* 8px */
 
+  /* ATTRIBUTION */
+  --sp-footer: 0.6875rem; /* 11px */
+
   /* VIEWPORT BOUNDARIES */
   --sp-wd-min: 23.4375rem; /* 375px Mobile, min-width */
   --sp-wd-max: 46rem; /* 736px Dessktop, max-width */
 
   /* SEMANTIC SPACING (the why, the purpose) */
-
   --wd-recipe-card: clamp(var(--sp-wd-min), 90vw, var(--sp-wd-max));
 
   --fs-title: var(--sp-500); /* 40px */
   --fs-subtitle: var(--sp-350); /* 28px */
   --fs-prep-time: var(--sp-250); /* 20px */
   --fs-paragraph: var(--sp-200); /* 16px */
+  --fs-footer: var(--sp);
 
   --pd-recipe-card: var(--sp-500);
 
@@ -87,13 +90,14 @@ DESIGN TOKEN VAULT ↓
     10%,
     34%
   ); /* paragraph + its bulleted points + table data */
-  --clr-stone-150: hsl(30, 18%, 87%); /* */
   --clr-rose-800: hsl(
     332,
     51%,
     32%
   ); /* prep-time title + its bulleted points */
   --clr-brown-800: hsl(14, 45%, 36%); /* */
+  --clr-anchor: hsl(228, 45%, 44%);
+  --clr-stone-150: hsl(30, 18%, 87%); /* */
 
   /* SEMANTIC COLOR */
   --clr-card: var(--clr-white);
@@ -130,6 +134,14 @@ DESIGN TOKEN VAULT ↑
 /* =================
 RECIPE CARD DESIGN ↓
 ==================== */
+
+.attribution {
+  font-size: var(--fs-footer);
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-anchor);
+}
 
 body {
   display: flex;
