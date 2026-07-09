@@ -64,6 +64,11 @@ DESIGN TOKEN VAULT ↓
   --fs-prep-time: var(--sp-250); /* 20px */
   --fs-paragraph: var(--sp-200); /* 16px */
 
+  --pd-recipe-card: var(--sp-500);
+
+  --br-big: var(--sp-300);
+  --br-small: var(--sp-150);
+
   /* ------
   SPACING ↑
   --------- */
@@ -74,7 +79,7 @@ DESIGN TOKEN VAULT ↓
 
   /* PRIMITIVE COLOR */
   --clr-stone-100: hsl(30, 54%, 90%); /* body background */
-  --clr-white: hsl(0, 0%, 100%); /* card background */
+  --clr-white: rgba(255, 255, 255, 70%); /* card background */
   --clr-rose-50: hsl(330, 100%, 98%); /* prep-time background */
   --clr-stone-900: hsl(24, 5%, 18%); /* titile */
   --clr-stone-600: hsl(
@@ -91,6 +96,7 @@ DESIGN TOKEN VAULT ↓
   --clr-brown-800: hsl(14, 45%, 36%); /* */
 
   /* SEMANTIC COLOR */
+  --clr-card: var(--clr-white);
   --clr-title: var(--clr-stone-900);
   --clr-subtitle: var(--clr-brown-800);
   --clr-prep-time: var(--clr-rose-800);
@@ -117,15 +123,29 @@ DESIGN TOKEN VAULT ↓
   TYPOGRAPHY ↑
   ------------ */
 }
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
 /* =================
 DESIGN TOKEN VAULT ↑
+==================== */
+
+/* =================
+RECIPE CARD DESIGN ↓
+==================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-stone-100);
+}
+
+.recipe-card {
+  padding: var(--pd-recipe-card);
+  border-radius: var(--br-big);
+  background-color: var(--clr-card);
+}
+
+/* =================
+RECIPE CARD DESIGN ↑
 ==================== */
