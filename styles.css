@@ -70,6 +70,7 @@ DESIGN TOKEN VAULT ↓
   --pd-recipe-card: var(--sp-500);
 
   --mrg-title: var(--sp-500) 0 var(--sp-300);
+  --mrg-description: var(--sp-400);
 
   --br-big: var(--sp-300);
   --br-small: var(--sp-150);
@@ -179,6 +180,16 @@ body {
   font-weight: var(--fw-paragraph);
   line-height: var(--lh-100);
   color: var(--clr-title);
+}
+
+.recipe-card__description {
+  display: block;
+  margin-bottom: var(--mrg-description);
+  font-family: var(--ff-paragraphs);
+  font-size: var(--fw-paragraph);
+  font-weight: var(--fw-paragraph);
+  line-height: var(--lh-150);
+  color: var(--clr-paragraph);
 }
 
 /* =================
