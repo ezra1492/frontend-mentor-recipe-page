@@ -68,6 +68,7 @@ DESIGN TOKEN VAULT ↓
   --fs-footer: var(--sp);
 
   --pd-recipe-card: var(--sp-500);
+  --pd-prep-time: var(--sp-300);
 
   --mrg-title: var(--sp-500) 0 var(--sp-300);
   --mrg-description: var(--sp-400);
@@ -106,7 +107,8 @@ DESIGN TOKEN VAULT ↓
   --clr-card: var(--clr-white);
   --clr-title: var(--clr-stone-900);
   --clr-subtitle: var(--clr-brown-800);
-  --clr-prep-time: var(--clr-rose-800);
+  --clr-prep-time-title: var(--clr-rose-800);
+  --clr-prep-time-background: var(--clr-rose-50);
   --clr-paragraph: var(--clr-stone-600);
 
   /* ----
@@ -183,13 +185,21 @@ body {
 }
 
 .recipe-card__description {
-  display: block;
+  display: block; /* <p> is a block element by default  */
   margin-bottom: var(--mrg-description);
   font-family: var(--ff-paragraphs);
   font-size: var(--fs-paragraph);
   font-weight: var(--fw-paragraph);
   line-height: var(--lh-150);
   color: var(--clr-paragraph);
+}
+
+.recipe-card__preparation-stats {
+  display: block; /* <Section> is also a block-level element */
+  padding: var(--pd-prep-time);
+  margin-bottom: var(--mrg-description);
+  border-radius: var(--br-small);
+  background-color: var(--clr-prep-time-background);
 }
 
 /* =================
