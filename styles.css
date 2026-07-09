@@ -78,6 +78,7 @@ DESIGN TOKEN VAULT ↓
 
   /* MARGIN */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
+  --mrg-subtitle: var(--sp-300);
   --mrg-description: var(--sp-400);
   --mrg-prep-time: var(--sp-200);
   --mrg-prep-time-list: var(--sp-100);
@@ -174,6 +175,12 @@ body {
 .recipe-card {
   padding: var(--pd-recipe-card);
   width: var(--wd-recipe-card);
+  /* Typography (Inherited Properties) 
+     These values flow down to all children unless overridden */
+  font-family: var(--ff-paragraphs);
+  font-size: var(--fs-paragraph);
+  font-weight: var(--fw-paragraph);
+  color: var(--clr-paragraph);
   border-radius: var(--br-big);
   background-color: var(--clr-card);
 }
@@ -189,7 +196,7 @@ body {
   margin: var(--mrg-title);
   font-family: var(--ff-titles);
   font-size: var(--fs-title);
-  font-weight: var(--fw-paragraph);
+  font-weight: var(--fw-paragraph); /* override User Agent Stylesheet */
   line-height: var(--lh-100);
   color: var(--clr-title);
 }
@@ -197,20 +204,14 @@ body {
 .recipe-card__description {
   display: block; /* <p> is a block element by default  */
   margin-bottom: var(--mrg-description);
-  font-family: var(--ff-paragraphs);
-  font-size: var(--fs-paragraph);
-  font-weight: var(--fw-paragraph);
   line-height: var(--lh-150);
-  color: var(--clr-paragraph);
 }
 
 .recipe-card__preparation-stats {
   display: block; /* <Section> is also a block-level element */
   padding: var(--pd-prep-time);
   margin-bottom: var(--mrg-description);
-  font-family: var(--ff-paragraphs);
   border-radius: var(--br-small);
-  color: var(--clr-paragraph);
   background-color: var(--clr-prep-time-background);
 }
 
@@ -224,8 +225,6 @@ body {
 
 .recipe-card__preparation-stats time {
   display: block;
-  font-size: var(--fs-paragraph);
-  font-weight: var(--fw-paragraph);
   line-height: var(--lh-150);
   text-indent: var(--ti-prep-time);
 }
@@ -244,6 +243,15 @@ body {
 
 .recipe-card__time-head {
   font-weight: var(--fw-bold);
+}
+
+.recipe-card__subtitle {
+  margin-bottom: var(--mrg-subtitle);
+  /* Typography (Specific overrides) */
+  font-family: var(--ff-titles);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-paragraph);
+  color: var(--clr-subtitle);
 }
 
 /* =================
