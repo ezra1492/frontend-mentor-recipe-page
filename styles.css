@@ -55,7 +55,7 @@ DESIGN TOKEN VAULT ↓
   --sp-footer: 0.6875rem; /* 11px */
 
   /* VIEWPORT BOUNDARIES */
-  --sp-wd-min: 23.4375rem; /* 375px Mobile, min-width */
+  --sp-wd-min: 20rem; /* 320px Mobile, min-width */
   --sp-wd-max: 46rem; /* 736px Dessktop, max-width */
 
   /* SEMANTIC SPACING (the why, the purpose) */
@@ -80,6 +80,7 @@ DESIGN TOKEN VAULT ↓
   --mrg-description: var(--sp-400);
   --mrg-prep-time: var(--sp-200);
   --mrg-list-bottom: var(--sp-100);
+  --mrg-hr: var(--sp-400) 0;
 
   /* TEXT INDENT: Only moves the very first line of text */
   --ti-list: var(--sp-150); /* empuja solo la primera línea */
@@ -91,6 +92,8 @@ DESIGN TOKEN VAULT ↓
   /* ------
   SPACING ↑
   --------- */
+
+  --border-hr: 1px solid var(--clr-hr);
 
   /* ----
   COLOR ↓
@@ -285,6 +288,13 @@ body {
 /* ---------------------
    INGREDIENTS SECTION ↑
    --------------------- */
+
+hr {
+  margin: var(--mrg-hr);
+  border: 0; /* override User Agent Stylesheet */
+  border-top: var(--border-hr); /* Applies our clean, flat design line */
+  color: var(--clr-hr);
+}
 
 /* =================
 RECIPE CARD DESIGN ↑
