@@ -275,13 +275,15 @@ body {
    --------------------- */
 
 .recipe-card__ingredient-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mrg-list-bottom);
   padding-left: var(--pd-ul); /* Aligns the bullets under the title */
   line-height: var(--lh-150);
 }
 
 .recipe-card__ingredient-list li {
   padding-left: var(--pd-list); /* Adds space for all lines of the ingredient */
-  margin-bottom: var(--mrg-list-bottom);
 }
 
 .recipe-card__ingredient-list li::marker {
@@ -300,7 +302,7 @@ hr {
 }
 
 /* ----------------------
-   INSTRUCTIONS SECTION ↑
+   INSTRUCTIONS SECTION ↓
    ---------------------- */
 
 .recipe-card__instruction-list {
@@ -329,6 +331,21 @@ hr {
 /* ----------------------
    INSTRUCTIONS SECTION ↑
    ---------------------- */
+
+/* -------------------
+   NUTRITION SECTION ↓
+   ------------------- */
+
+.recipe-card__table {
+  border-collapse: collapse; /* remove gaps between cells */
+  width: 100%; /* Occupy 100% of the parent container's width */
+  margin-top: var(--mrg-subtitle);
+  text-align: left;
+}
+
+/* -------------------
+   NUTRITION SECTION ↑
+   ------------------- */
 
 /* =================
 RECIPE CARD DESIGN ↑
