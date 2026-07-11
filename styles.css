@@ -43,6 +43,7 @@ DESIGN TOKEN VAULT ↓
   --sp-1600: 8rem; /* 128px */
   --sp-600: 3rem; /* 48px */
   --sp-500: 2.5rem; /* 40px */
+  --sp-450: 2.25rem; /* 36px */
   --sp-400: 2rem; /* 32px */
   --sp-350: 1.75rem; /* 28px */
   --sp-300: 1.5rem; /* 24px */
@@ -68,6 +69,7 @@ DESIGN TOKEN VAULT ↓
   --fs-prep-time: var(--sp-250); /* 20px */
   --fs-paragraph: var(--sp-200); /* 16px */
   --fs-footer: var(--sp-footer); /* 11px */
+  --fs-mq-title: var(--sp-450); /* 36px */
 
   /* PADDING: Internal 'bubble wrap' for our boxes*/
   --pd-recipe-card: var(--sp-500);
@@ -409,6 +411,8 @@ hr {
    ----------------------------- */
 
 @media screen and (max-width: 375px) {
+  /* CARD + HERO */
+
   /* Viewport Context: Removes the outer 'bubble wrap' */
   body {
     padding: 0;
@@ -428,6 +432,18 @@ hr {
   .recipe-card__img {
     width: 100%;
     border-radius: 0;
+  }
+
+  /* TITLE */
+  .recipe-card__title {
+    font-size: var(--fs-mq-title);
+    line-height: var(--lh-100);
+  }
+
+  /* PREP TIME */
+  .recipe-card__preparation-stats time {
+    padding-left: var(--pd-list);
+    text-indent: 0;
   }
 }
 
