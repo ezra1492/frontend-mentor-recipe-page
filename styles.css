@@ -73,6 +73,7 @@ DESIGN TOKEN VAULT ↓
   --pd-prep-time: var(--sp-300);
   --pd-ul: var(--sp-300); /* Moves the entire list container */
   --pd-list: var(--sp-200); /* Internal space for every line in the item */
+  --pd-instructions: var(--sp-300);
 
   /* MARGIN: Empty space between separate boxes */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
@@ -83,7 +84,7 @@ DESIGN TOKEN VAULT ↓
   --mrg-hr: var(--sp-400) 0;
 
   /* TEXT INDENT: Only moves the very first line of text */
-  --ti-list: var(--sp-150); /* empuja solo la primera línea */
+  --ti-list: var(--sp-150);
 
   /* BORDER RADIUS */
   --br-big: var(--sp-300);
@@ -295,6 +296,37 @@ hr {
   border-top: var(--border-hr); /* Applies our clean, flat design line */
   color: var(--clr-hr);
 }
+
+/* ----------------------
+   INSTRUCTIONS SECTION ↑
+   ---------------------- */
+
+.recipe-card__instruction-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(
+    --mrg-list-bottom
+  ); /* Flexbox gap ensures total control over child spacing, eliminating redundant margins on the final list item */
+  padding-left: var(--pd-instructions);
+  line-height: var(--lh-150);
+}
+
+.recipe-card__instruction-list li::marker {
+  font-weight: var(--fw-bold);
+  color: var(--clr-subtitle);
+}
+
+.recipe-card__instruction-list li {
+  padding-left: var(--pd-list);
+}
+
+.recipe-card__instruction-step {
+  font-weight: var(--fw-bold);
+}
+
+/* ----------------------
+   INSTRUCTIONS SECTION ↑
+   ---------------------- */
 
 /* =================
 RECIPE CARD DESIGN ↑
