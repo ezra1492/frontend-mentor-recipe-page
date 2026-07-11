@@ -53,7 +53,7 @@ DESIGN TOKEN VAULT ↓
 
   /* ATTRIBUTION */
   --sp-fs-footer: 0.6875rem; /* 11px */
-  --sp-br-footer: 0.125rem; /* 2px */
+  --sp-br-footer: 0.25rem; /* 4px */
 
   /* VIEWPORT BOUNDARIES */
   --sp-wd-min: 23.4375rem; /* 375px Mobile, min-width */
@@ -77,6 +77,7 @@ DESIGN TOKEN VAULT ↓
   --pd-instructions: var(--sp-300);
   --pd-th: var(--sp-400);
   --pd-table: var(--sp-150) 0;
+  --pd-media-query: 0 var(--sp-400) var(--sp-500);
 
   /* MARGIN: Empty space between separate boxes */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
@@ -400,6 +401,39 @@ hr {
 /* ----------------
    FOOTER SECTION ↑
    ---------------- */
+
+/* -----------------------------
+   MEDIA QUERY (Mobile Sensor) ↓
+   Protocol: Screens <= 375px (Figma Spec).
+   Purpose: Implements Full-Bleed layout for the image while protecting text readability with an inner wrapper.
+   ----------------------------- */
+
+@media screen and (max-width: 375px) {
+  /* Viewport Context: Removes the outer 'bubble wrap' */
+  body {
+    padding: 0;
+  }
+
+  .recipe-card__media-query-text {
+    padding: var(--pd-media-query);
+  }
+
+  /* Box Model & Visuals: Achieving Full-Bleed integration */
+  .recipe-card {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  /* Image integrates with the device edges */
+  .recipe-card__img {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* -------------
+   MEDIA QUERY ↑
+   ------------- */
 
 /* =================
 RECIPE CARD DESIGN ↑
