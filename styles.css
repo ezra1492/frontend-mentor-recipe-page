@@ -80,6 +80,7 @@ DESIGN TOKEN VAULT ↓
   --pd-th: var(--sp-400);
   --pd-table: var(--sp-150) 0;
   --pd-media-query: 0 var(--sp-400) var(--sp-500);
+  --pd-mq-ul: var(--sp-200);
 
   /* MARGIN: Empty space between separate boxes */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
@@ -436,14 +437,14 @@ hr {
 
   /* TITLE */
   .recipe-card__title {
-    font-size: var(--fs-mq-title);
+    font-size: var(--fs-mq-title); /* 36px - Figma Mobile Spec */
     line-height: var(--lh-100);
   }
 
   /* PREP TIME */
   .recipe-card__preparation-stats time {
-    padding-left: var(--pd-list);
-    text-indent: 0;
+    padding-left: var(--pd-mq-ul);
+    text-indent: 0; /* Resets desktop indent for cleaner mobile layout */
   }
 }
 
