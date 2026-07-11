@@ -218,11 +218,17 @@ body {
    --------------------- */
 
 .recipe-card__preparation-stats {
-  display: block; /* <Section> is also a block-level element */
   padding: var(--pd-prep-time);
   margin-bottom: var(--mrg-description);
   border-radius: var(--br-small);
   background-color: var(--clr-prep-time-background);
+}
+
+/* Flexbox puts gaps between the li items inside the ul */
+.recipe-card__prep-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mrg-list-bottom);
 }
 
 .recipe-card__preparation-time {
@@ -241,10 +247,6 @@ body {
 
 .recipe-card__preparation-stats ul {
   padding-left: var(--pd-ul); /* Aligns the bullets under the title */
-}
-
-.recipe-card__preparation-stats li {
-  margin-bottom: var(--mrg-list-bottom);
 }
 
 .recipe-card__preparation-stats li::marker {
