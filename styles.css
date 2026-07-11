@@ -55,7 +55,7 @@ DESIGN TOKEN VAULT ↓
   --sp-footer: 0.6875rem; /* 11px */
 
   /* VIEWPORT BOUNDARIES */
-  --sp-wd-min: 20rem; /* 320px Mobile, min-width */
+  --sp-wd-min: 23.4375rem; /* 375px Mobile, min-width */
   --sp-wd-max: 46rem; /* 736px Dessktop, max-width */
 
   /* SEMANTIC SPACING (the why, the purpose) */
@@ -74,6 +74,8 @@ DESIGN TOKEN VAULT ↓
   --pd-ul: var(--sp-300); /* Moves the entire list container */
   --pd-list: var(--sp-200); /* Internal space for every line in the item */
   --pd-instructions: var(--sp-300);
+  --pd-th: var(--sp-400);
+  --pd-table: var(--sp-150) 0;
 
   /* MARGIN: Empty space between separate boxes */
   --mrg-title: var(--sp-500) 0 var(--sp-300);
@@ -152,14 +154,6 @@ DESIGN TOKEN VAULT ↑
 /* =================
 RECIPE CARD DESIGN ↓
 ==================== */
-
-.attribution {
-  font-size: var(--fs-footer);
-  text-align: center;
-}
-.attribution a {
-  color: var(--clr-anchor);
-}
 
 body {
   display: flex;
@@ -341,6 +335,30 @@ hr {
   width: 100%; /* Occupy 100% of the parent container's width */
   margin-top: var(--mrg-subtitle);
   text-align: left;
+}
+
+.recipe-card__table th,
+.recipe-card__table td {
+  padding: var(--pd-table);
+  border-bottom: var(--border-hr);
+  font-weight: var(--fw-paragraph);
+  line-height: var(--lh-150);
+}
+
+.recipe-card__table tr:last-child th,
+.recipe-card__table tr:last-child td {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recipe-card__table th {
+  padding-left: var(--pd-th);
+}
+
+.recipe-card__table td {
+  width: 50%; /* Box Model: Splitting the table into two equal 50% halves establishes a fixed central axis. This ensures that all labels and values remain perfectly aligned vertically, preventing layout shifts regardless of text length. */
+  font-weight: var(--fw-bold);
+  color: var(--clr-subtitle);
 }
 
 /* -------------------
