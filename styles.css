@@ -52,7 +52,8 @@ DESIGN TOKEN VAULT ↓
   --sp-100: 0.5rem; /* 8px */
 
   /* ATTRIBUTION */
-  --sp-footer: 0.6875rem; /* 11px */
+  --sp-fs-footer: 0.6875rem; /* 11px */
+  --sp-br-footer: 0.125rem; /* 2px */
 
   /* VIEWPORT BOUNDARIES */
   --sp-wd-min: 23.4375rem; /* 375px Mobile, min-width */
@@ -84,6 +85,7 @@ DESIGN TOKEN VAULT ↓
   --mrg-prep-time: var(--sp-200);
   --mrg-list-bottom: var(--sp-100);
   --mrg-hr: var(--sp-400) 0;
+  --mrg-attribution: var(--sp-150);
 
   /* TEXT INDENT: Only moves the very first line of text */
   --ti-list: var(--sp-150);
@@ -91,6 +93,7 @@ DESIGN TOKEN VAULT ↓
   /* BORDER RADIUS */
   --br-big: var(--sp-300);
   --br-small: var(--sp-150);
+  --br-attribution: var(--sp-br-footer);
 
   /* ------
   SPACING ↑
@@ -121,6 +124,8 @@ DESIGN TOKEN VAULT ↓
   --clr-prep-time-background: var(--clr-rose-50);
   --clr-paragraph: var(--clr-stone-600);
   --clr-hr: var(--clr-stone-150);
+  --clr-links: var(--clr-rose-800);
+  --clr-links-active: var(--clr-rose-50);
 
   /* ----
   COLOR ↑
@@ -364,6 +369,37 @@ hr {
 /* -------------------
    NUTRITION SECTION ↑
    ------------------- */
+
+/* ----------------
+   FOOTER SECTION ↓
+   ---------------- */
+
+.attribution {
+  margin-top: var(--mrg-attribution);
+  font-family: var(--ff-paragraphs);
+  font-size: var(--fs-footer);
+  text-align: center;
+  color: var(--clr-paragraph);
+}
+.attribution a {
+  font-family: var(--ff-titles);
+  font-weight: var(--fw-bold);
+  color: var(--clr-links);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.attribution a:hover,
+.attribution a:focus-visible {
+  color: var(--clr-links-active);
+  border-radius: var(--br-attribution);
+  background-color: var(--clr-links);
+}
+
+/* ----------------
+   FOOTER SECTION ↑
+   ---------------- */
 
 /* =================
 RECIPE CARD DESIGN ↑
