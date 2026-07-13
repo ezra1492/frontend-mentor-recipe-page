@@ -370,6 +370,30 @@ hr {
   color: var(--clr-subtitle);
 }
 
+/* Accessibility Utility: The "Invisibility Cloak" 
+   This hides elements from the eyes but keeps them for Screen Readers */
+.recipe-card__caption-sr-only {
+  /* Takes the box off the shelf so it doesn't take up any space in the layout */
+  position: absolute;
+
+  /* Shrinks the box down to the size of a tiny grain of sand */
+  width: 1px;
+  height: 1px;
+
+  /* Removes all the internal "bubble wrap" (padding) and the box itself (border) */
+  border: 0;
+  padding: 0;
+
+  /* Pushes that tiny grain outside the visible area just to be safe */
+  margin: -1px;
+  /* Acts like "scissors" to cut off any content that tries to stick out of the tiny box */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+
+  /* Forces the text to stay in one line so it doesn't try to make the box taller */
+  white-space: nowrap;
+}
+
 /* -------------------
    NUTRITION SECTION ↑
    ------------------- */
