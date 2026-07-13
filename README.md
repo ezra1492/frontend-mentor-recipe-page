@@ -35,13 +35,12 @@ I built this using a **mobile-first approach**. One of the coolest parts is the 
 
 - **Semantic HTML5 markup** - Used for the foundation, including special tags like `<time>` with **ISO 8601** so machines can understand cooking times.
 
-  ```css
+  ```html
   <!-- Time: represents a specific period of time, translate dates into machine-readeble format -->
-    <time datetime="PT10M"
-          ><span class="recipe-card__time-head">Total:
-          </span>
-          Approximately 10 minutes
-    </time>
+  <time datetime="PT10M"
+    ><span class="recipe-card__time-head">Total: </span>
+    Approximately 10 minutes
+  </time>
   …
   ```
 
