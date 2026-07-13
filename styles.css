@@ -14,7 +14,7 @@
 ======== */
 
 @font-face {
-  font-family: "outfit";
+  font-family: "Outfit";
   src: url(assets/fonts/outfit/Outfit-VariableFont_wght.woff2) format("woff2"); /* By declaring the format the browser reads it and in case it isn't supported, the user won't spend data in assets the browser won't be able to use */
   font-weight: 100 900; /* covers all weights (100-900) to save loading time */
   font-style: normal;
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-  font-family: "young-serif";
+  font-family: "Young Serif";
   src: url(assets/fonts/young-serif/YoungSerif-Regular.woff2) format("woff2");
   font-weight: 400; /* used for the recipe title */
   font-style: normal;
