@@ -22,7 +22,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 This is my take on the **Recipe Page challenge** from Frontend Mentor.
 
 My goal for this project was to build a clean, responsive recipe page that matches the professional design perfectly. Instead of just guessing where to put things, I focused on building a real system. I used a **"Design Token Vault"** to keep my colors and spacing organized, and I used "swimming pool lanes" in my CSS to make sure the code is easy to follow.
-I built this using a **mobile-first approach**. One of the coolest parts is the **"environmental sensor"** I created; it detects when you're on a phone (375px) and switches the layout so the image touches the edges of the screen (full-bleed), while keeping the text safe and easy to read in its own "inner room". I also made sure it’s accessible for everyone, even including special codes like **ISO 8601** for machines to understand the cooking times.
+I built this using a **Desktop-to-Mobile Iteration approach**. One of the coolest parts is the **"environmental sensor"** I created; it detects when you're on a phone (375px) and switches the layout so the image touches the edges of the screen (full-bleed), while keeping the text safe and easy to read in its own "inner room". I also made sure it’s accessible for everyone, even including special codes like **ISO 8601** for machines to understand the cooking times.
 
 ### Links
 
@@ -46,7 +46,7 @@ I built this using a **mobile-first approach**. One of the coolest parts is the 
 
 - **CSS custom properties** – This is my **"Design Token Vault"** where I stored all my colors and spacing to keep everything organized.
 - **Flexbox** – My main tool for positioning elements, like the instructions list, to make sure the spacing is perfect.
-- **Mobile-first workflow** – I actually started by building the full desktop version first (1440px). Once that was solid, I used my **"environmental sensor"** (Media Query) to make sure everything adapted perfectly for smaller phone screens (375px).
+- **Desktop-to-Mobile Iteration** – I chose to implement the full desktop version first (1440px) to establish a solid structural baseline. Once the desktop "Blueprint" was perfect, I used my **"Environmental Sensor"** (Media Query) to create a specific **"Mobile Protocol"**. This allowed me to deliberately deconstruct the desktop layout and adapt it into a **"Full-Bleed"** experience for small phone screens (375px).
 - **BEM Methodology** – A naming system I used for my CSS classes to keep the structure clear and easy to read.
 
 ### What I learned
