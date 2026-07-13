@@ -68,7 +68,7 @@ DESIGN TOKEN VAULT ↓
   --fs-subtitle: var(--sp-350); /* 28px */
   --fs-prep-time: var(--sp-250); /* 20px */
   --fs-paragraph: var(--sp-200); /* 16px */
-  --fs-footer: var(--sp-footer); /* 11px */
+  --fs-footer: var(--sp-fs-footer); /* 11px */
   --fs-mq-title: var(--sp-450); /* 36px */
 
   /* PADDING: Internal 'bubble wrap' for our boxes*/
